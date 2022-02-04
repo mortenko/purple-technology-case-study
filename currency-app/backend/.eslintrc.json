@@ -1,0 +1,32 @@
+{
+    "extends": [
+      "eslint:recommended",
+      "plugin:node/recommended",
+      "plugin:import/errors",
+      "plugin:import/warnings"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2020
+    },
+    "rules": {
+      "no-undef": 0,
+      "node/exports-style": ["error", "module.exports"],
+      "node/file-extension-in-import": ["error", "always"],
+      "node/prefer-global/buffer": ["error", "always"],
+      "node/prefer-global/console": ["error", "always"],
+      "node/prefer-global/process": ["error", "always"],
+      "node/prefer-global/url-search-params": ["error", "always"],
+      "node/prefer-global/url": ["error", "always"],
+      "node/prefer-promises/dns": "error",
+      "node/prefer-promises/fs": "error",
+      "import/order": [2, { "alphabetize": { "order": "asc" } }],
+      "import/newline-after-import": 2,
+      "import/prefer-default-export": 2,
+      "import/group-exports": 2,
+      "import/named": 2,
+      "import/first": 2,
+      "import/no-cycle": 2,
+      "import/exports-last": 2,
+      "import/no-duplicates": 2
+    }
+  }
