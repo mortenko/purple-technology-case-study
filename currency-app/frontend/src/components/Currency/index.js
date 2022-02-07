@@ -112,15 +112,16 @@ const Currency = () => {
       const { data } = await axiosClient(
         `${process.env.REACT_APP_BASE_URL}/currency/list`
       );
-      setCurrencies(
-        _.orderBy(
-          Object.entries(data.currencies).map(([key, value]) => ({
-            key,
-            value,
-          })),
-          "value"
-        )
-      );
+      const currencyList = data.currencies
+        ? _.orderBy(
+            Object.entries(data.currencies).map(([key, value]) => ({
+              key,
+              value,
+            })),
+            "value"
+          )
+        : [];
+      setCurrencies(currencyList);
     };
     getListOfCurrencies();
   }, [setCurrencies]);
