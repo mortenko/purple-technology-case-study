@@ -46,7 +46,7 @@ const CurrencyForm = ({ handleSubmitForm, showStatistics, currencies }) => {
           rules={{
             required: { value: true, message: "This field is mandatory" },
             pattern: {
-              value: /^[\d]+$/,
+              value: /^[\d]+(\.[\d]+)?$/,
               message: "This field must be a number",
             },
           }}
