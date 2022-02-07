@@ -59,3 +59,23 @@ Enhancements:
   - Commit often as you work.Make your work production-ready
   - Expect the app will be later developed further by someone else.
   - Write your code with that in mind.Take a look at the stack we use in our GitHub. You can use  it or take some inspiration from it.
+
+
+
+  My Enhancements:
+   
+   frontend: 
+
+    1. add "toastify" to buble error/success messages for user (notification)
+    2. make it responsive for all kind of devices 
+    3. change select component to be able search currency by typing (select currency by hitting also enter)
+    4. make switchable from, to 
+    5. add fancy country flags next to country name
+
+    backend:
+      1. add logging
+      2. use another npm module for sqlite (maybe promisify funcs then)
+
+     
+    
+
