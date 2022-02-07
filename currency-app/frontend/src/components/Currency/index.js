@@ -47,6 +47,9 @@ const Currency = () => {
   const [statistics, setStatistics] = useState({});
   const [isOpen, setOpen] = useState(false);
 
+  const formatCurrency = (number) =>
+    new Intl.NumberFormat("es-US").format(Number(number.toFixed(2)));
+
   const convertCurrencies = async ({ from, to, amount }) => {
     const regexFrom = new RegExp(`(USD)(${from})`);
     const regexTo = new RegExp(`(USD)(${to})`);
@@ -63,10 +66,10 @@ const Currency = () => {
 
     const toObj = Object.assign({}, ...result);
 
-    const formatConversion = new Intl.NumberFormat("es-US").format(
-      ((parseInt(amount, 10) / toObj.fromVal) * toObj.toVal).toFixed(2)
-    );
-    const convertedInUSD = formatConversion / toObj.toVal;
+    const conversion = (parseInt(amount, 10) / toObj.fromVal) * toObj.toVal;
+    const convertedInUSD = conversion / toObj.toVal;
+
+    const formatConversion = formatCurrency(conversion);
 
     setConversionResult({
       converted: `${formatConversion}(${to})`,
