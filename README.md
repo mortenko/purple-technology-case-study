@@ -66,15 +66,16 @@ Enhancements:
    
    frontend: 
 
-    1. add "toastify" to buble error/success messages for user (notification)
-    2. make it responsive for all kind of devices 
-    3. change select component to be able search currency by typing (select currency by hitting also enter)
-    4. make switchable from, to 
-    5. add fancy country flags next to country name
+    - add "toastify" to buble error/success messages for user (notification)
+    - make it responsive for all kind of devices 
+    - change select component to be able search currency by typing (select currency by hitting also enter)
+    - make switchable from, to 
+    - add fancy country flags next to country name
 
-    backend:
-      1. add logging
-      2. use another npm module for sqlite (maybe promisify funcs then)
+   backend:
+
+    - add logging
+    - use another npm module for sqlite (maybe promisify funcs then)
 
      
     
