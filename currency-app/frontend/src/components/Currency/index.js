@@ -63,19 +63,18 @@ const Currency = () => {
 
     const toObj = Object.assign({}, ...result);
 
-    const conversion = (
-      (parseInt(amount, 10) / toObj.fromVal) *
-      toObj.toVal
-    ).toFixed(2);
-    const convertedInUSD = conversion / toObj.toVal;
+    const formatConversion = new Intl.NumberFormat("es-US").format(
+      ((parseInt(amount, 10) / toObj.fromVal) * toObj.toVal).toFixed(2)
+    );
+    const convertedInUSD = formatConversion / toObj.toVal;
 
     setConversionResult({
-      converted: `${conversion}(${to})`,
+      converted: `${formatConversion}(${to})`,
       convertedInUSD,
     });
 
     return {
-      converted: `${conversion}(${to})`,
+      converted: `${formatConversion}(${to})`,
       convertedInUSD,
     };
   };
