@@ -1,0 +1,23 @@
+{
+  "server": {
+    "HOST": "localhost",
+    "PORT": 5000
+  },
+  "currency_api": {
+    "HOST": "http://apilayer.net/api",
+    "ACCESS_KEY": "access_key=b8a27ea15c1125adfa782d50dd5d093b"
+  },
+  "database": {
+    "NAME": "currency.db"
+  },
+  "csrf": {
+    "invalidTokenMessage": "Invalid CSRF token",
+    "invalidTokenStatusCode": 403,
+    "excludedMethods": ["GET", "HEAD", "OPTIONS"],
+    "disableQuery": false
+  },
+  "cors": {
+    "origin": false,
+    "credentials": true
+  }
+}
